@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="navbar">
+            <img src="icon.jpg" class="logo">
+            <nav>
+                <ul id="menu">
+                    <li><a href="">Game Controllers</a></li>
+                    <li><a href="">VR </a></li>
+                    <li><a href="">Media Remotes</a></li>
+                    <li><a href="">Others</a></li>
+                   
+ </ul>
+                 <img src="crescent (1).png"id="dark">
+            </nav>
+          <img src="bar.png" id="menu-icon" onclick="toggleMenu()">
+        </div>
+        <div class="row">
+            <div class="col-1">
+                <h2>PS4 <span>V2</span><br> Dualshock 4</h2>
+                <h3>Wireless Controller for PlayStation 4</h3>
+                <p>(Compactible/Generic)</p>
+                <h4>$32.50</h4>
+                <button type="button">Buy Now</button>
+            </div>
+            <div class="col-2">
+                <img src="handle.png" class="controller">
+                <div class="color-box"></div>
+
+
+
+            </div>
+
+        </div>
+        <div id="social-links">
+            <img src="bfb.png"id="fb">
+            <img src="twt.png"id="tw">
+            <img src="inst.png"id="inst">
+
+        </div>
+    </div>
+
+
+    <script>
+      let menu = document.getElementById("menu");
+      menu.style.height = "0px";
+      function toggleMenu(){
+          if(menu.style.height == "0px"){
+              menu.style.height = "130px";
+          }else{
+              menu.style.height = "0px";
+          }
+          
+         }
+         
+         let icon = document.getElementById("dark");
+         let whiteBar = document.getElementById("menu-icon");
+      let facebook = document.getElementById("fb");
+      let twitter = document.getElementById("tw");
+      let Instagram = document.getElementById("inst");
+         icon.onclick = function (){
+    document.body.classList.toggle("dark");
+    if(document.body.classList.contains("dark")){
+        icon.src = "sun.png";
+        whiteBar.src = "wb.png";
+        facebook.src = "fb.png";
+        twitter.src = "twitter.png";
+        Instagram.src = "instagram.png";
+        
+    }else{
+        icon.src = "crescent (1).png";
+        whiteBar.src = "bar.png";
+        facebook.src = "bfb.png";
+        twitter.src = "twt.png";
+        Instagram.src = "inst.png";
+    }
+      }
+    </script>
+</body>
+
+</html>
